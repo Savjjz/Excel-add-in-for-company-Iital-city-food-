@@ -1,0 +1,14 @@
+D:\projects\FirstExcel\bin\Debug\FirstExcel.dll
+D:\projects\FirstExcel\bin\Debug\FirstExcel.pdb
+D:\projects\FirstExcel\bin\Debug\FirstExcel.dll.manifest
+D:\projects\FirstExcel\bin\Debug\FirstExcel.vsto
+D:\projects\FirstExcel\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\projects\FirstExcel\obj\Debug\FirstExcel.csprojAssemblyReference.cache
+D:\projects\FirstExcel\obj\Debug\FirstExcel.Properties.Resources.resources
+D:\projects\FirstExcel\obj\Debug\FirstExcel.csproj.GenerateResource.cache
+D:\projects\FirstExcel\obj\Debug\FirstExcel.csproj.CoreCompileInputs.cache
+D:\projects\FirstExcel\obj\Debug\FirstExcel.csproj.CopyComplete
+D:\projects\FirstExcel\obj\Debug\FirstExcel.dll
+D:\projects\FirstExcel\obj\Debug\FirstExcel.pdb
+D:\projects\FirstExcel\obj\Debug\FirstExcel.GOODS.resources
+D:\projects\FirstExcel\obj\Debug\FirstExcel.GUI.OpenExcelFileDialog.resources
