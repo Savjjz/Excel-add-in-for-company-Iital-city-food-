@@ -16,7 +16,8 @@ namespace FirstExcel
 
         private void btnFillInFileGOODS_Click(object sender, RibbonControlEventArgs e)
         {
-            ClickedbtnFillInFileGOODS?.Invoke();
+            OpenFileGoods openFileGoods = new OpenFileGoods();
+            openFileGoods.Show();
         }
 
         private void chooseCategory_TextChanged(object sender, RibbonControlEventArgs e)

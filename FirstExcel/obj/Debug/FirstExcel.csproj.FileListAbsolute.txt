@@ -12,3 +12,4 @@ D:\projects\FirstExcel\obj\Debug\FirstExcel.dll
 D:\projects\FirstExcel\obj\Debug\FirstExcel.pdb
 D:\projects\FirstExcel\obj\Debug\FirstExcel.GOODS.resources
 D:\projects\FirstExcel\obj\Debug\FirstExcel.GUI.OpenExcelFileDialog.resources
+D:\projects\FirstExcel\obj\Debug\FirstExcel.GUI.OpenFileGoods.resources

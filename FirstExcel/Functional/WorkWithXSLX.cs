@@ -1,21 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Excel = Microsoft.Office.Interop.Excel;
-using Office = Microsoft.Office.Core;
-using Microsoft.Office.Tools.Excel;
-using System.Security.Cryptography.X509Certificates;
 using Microsoft.Office.Interop.Excel;
-using System.IO;
-using System.Windows.Forms;
-using System.Globalization;
 
 namespace FirstExcel.Functional
 {
     public static class WorkWithXSLX
     {
+
         /// <summary>
         /// Поиск ID недостающих товаров из файла 1С в файле платформы
         /// </summary>
@@ -111,9 +103,6 @@ namespace FirstExcel.Functional
                 cellId = Globals.ThisAddIn.Application.get_Range(cellNumberId);
             }
 
-            MessageBox.Show(Convert.ToString(Data.GetLength(0)));
-            MessageBox.Show(Convert.ToString(Data.GetLength(1)));
-
             return Data;
         }
   
@@ -138,19 +127,29 @@ namespace FirstExcel.Functional
                 currentLine++;
             }
 
+            string str = "Консервированные супы; " + "Консервы грибные; " + "Консервы овощные; " + "Консервы фруктовые; " +
+                        "Оливки, маслины; Паштет; Урбеч, хумус, тапенад, диетическая ореховая паста; " + "Бобовые; " + "Крупа; " + "Лапша; " +
+                        "Макаронные изделия; " + "Мука; " + "Масло растительное; " + "Варенье, ягоды с сахаром, пюре, десерты; " +
+                        "Джем, конфитюр, повидло; " + "Мед; " + "Ореховая паста; " + "Шоколадно-ореховая паста; " + "Орехи; " + "Семечки; " +
+                        "Сухофрукты, ягоды, цукаты; " + "Сушеные, вяленые овощи и грибы; " + "Десертный соус; " + "Сироп, пекмез; " + "Сахар; " +
+                        "Соль; " + "Специи и приправы; " + "Горчица, хрен; " + "Заправка для салата; " + "Кетчуп; " + "Маринад; " + "Соусы; " +
+                        "Томатная паста; " + "Уксус; " + "Кофе зерновой и молотый; " + "Кофе растворимый; " + "Цикорий и злаковые напитки; " +
+                        "Чай; " + "Диетическая крупа, макароны, бобовые, клетчатка, отруби; " + "Диетические напитки; " + "Диетические снеки; " +
+                        "Злаковые батончики, фруктово-ореховые батончики, мюсли; " + "Листья нори, сушеная морская капуста; " + "Мюсли, гранола; " +
+                        "Овощные и фруктовые чипсы; " + "Печенье; " + "Нуга, щербет, халва; " + "Конфеты шоколадные, наборы, драже; " +
+                        "Шоколад и шоколадные изделия, фигурки, батончики; " + "Мармелад; " + "Пастила";
+
+            for (int i = 2; i < 2 + Data.GetLength(0); i++)
+            {
+                string cellNumber = "A" + Convert.ToString(i);
+                Excel.Range cell = Globals.ThisAddIn.Application.get_Range(cellNumber);
+                cell.Validation.Add(XlDVType.xlValidateList, XlDVAlertStyle.xlValidAlertStop, XlFormatConditionOperator.xlBetween, str);
+            }
+
             Globals.ThisAddIn.Application.ActiveSheet.Columns.AutoFit();
             Globals.ThisAddIn.Application.ActiveSheet.Rows.AutoFit();
         }
 
-        private static bool IsInList(List<int> list, int num)
-        {
-            foreach (int i in list)
-            {
-                if (i == num)
-                    return true;
-            }
-            return false;
-        }
         private static List<int> ListDivergence(List<int> list1, List<int> list2)
         {
             List<int> result = new List<int>();
@@ -172,19 +171,6 @@ namespace FirstExcel.Functional
             }
 
             return result;
-        }
-
-        private static void WorkbookForNewData(string[,] mas)
-        {
-            Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add();
-
-            for (int i = 0; i < mas.GetLength(0); i++)
-            {
-                for (int j = 0; j < mas.GetLength(1); j++)
-                {
-
-                }
-            }
         }
 
         private static void FillInFileGOODS()

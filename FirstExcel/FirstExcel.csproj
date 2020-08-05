@@ -163,32 +163,21 @@
     <Compile Include="GUI\OpenExcelFileDialog.Designer.cs">
       <DependentUpon>OpenExcelFileDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Platforms\GOODS\CreatorProductCake.cs" />
-    <Compile Include="Platforms\GOODS\CreatorProductCookies.cs" />
-    <Compile Include="Platforms\GOODS\CreatorProductOil.cs" />
-    <Compile Include="Platforms\GOODS\CreatorProductOlives.cs" />
-    <Compile Include="Platforms\GOODS\CreatorProductPasta.cs" />
-    <Compile Include="Platforms\GOODS\CreatorProductSauces.cs" />
-    <Compile Include="Platforms\GOODS\CreatorProductSpice.cs" />
-    <Compile Include="Platforms\GOODS\CreatorProductVinegar.cs" />
-    <Compile Include="Platforms\GOODS\Goods.cs" />
-    <Compile Include="Platforms\GOODS\CreatorProductSweets.cs" />
-    <Compile Include="Platforms\Platform.cs" />
-    <Compile Include="Products\ProductsGoods\Product.cs" />
-    <Compile Include="Products\ProductsGoods\ProductCake.cs" />
-    <Compile Include="Products\ProductsGoods\ProductCookies.cs" />
-    <Compile Include="Products\ProductsGoods\ProductOil.cs" />
-    <Compile Include="Products\ProductsGoods\ProductOlives.cs" />
-    <Compile Include="Products\ProductsGoods\ProductPasta.cs" />
-    <Compile Include="Products\ProductsGoods\ProductSauces.cs" />
-    <Compile Include="Products\ProductsGoods\ProductSpice.cs" />
-    <Compile Include="Products\ProductsGoods\ProductSweets.cs" />
-    <Compile Include="Products\ProductsGoods\ProductVinegar.cs" />
+    <Compile Include="GUI\OpenFileGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OpenFileGoods.Designer.cs">
+      <DependentUpon>OpenFileGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Platforms\Goods\Products\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
     <EmbeddedResource Include="GUI\OpenExcelFileDialog.resx">
       <DependentUpon>OpenExcelFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OpenFileGoods.resx">
+      <DependentUpon>OpenFileGoods.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
